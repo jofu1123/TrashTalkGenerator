@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "career": "engineer",
+      "image": "https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+    },
+    {
+      "career": "designer",
+      "image": "https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+    },
+    {
+      "career": "entrepreneur",
+      "image": "https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+    }
+  ]
+}
