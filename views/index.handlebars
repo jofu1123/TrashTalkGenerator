@@ -1,5 +1,4 @@
 <div class="container py-5">
-
   <div class="row">
     <div class="col-12 col-lg-12 col-xl-12 mx-auto">
       <div class="card">
@@ -7,35 +6,36 @@
           <h5 class="card-title">Trash Talk Generator</h5>
           <hr>
           <form method="POST" action="/">
-            <!--career-->
-            <div class="form-group form-row justify-content-between mb-5">
+            <div class="d-flex flex-row justify-content-around mb-5">
+              <!--career-->
               {{#each userList}}
-              <div class="form-check flex-column col-xs-4 mb-5">
+              <div class="card" style="width: 18em;">
                 <label for="{{this.career}}">
-                  <img src="{{this.image}}" alt="{{this.career}}" style="width: 20em; height:20em;">
+                  <img src="{{this.image}}" alt="{{this.career}}" class="card-img-top">
                 </label>
-                <div class="form-check check-inline">
-                  <input class="form-check-input" type="radio" name="career" id="{{this.career}}"
-                    value="{{this.career}}" {{#if this.isChecked}}checked{{/if}}>
-                  <label for="{{this.career}}">{{this.career}}</label>
+                <div class="card-body d-flex flex-column text-center">
+                  <div class="mt-auto">
+                    <input class="form-check-input" type="radio" name="career" id="{{this.career}}"
+                      value="{{this.career}}" {{#if this.isChecked}}checked{{/if}}>
+                    <label for="{{this.career}}">{{this.career}}</label>
+                  </div>
                 </div>
               </div>
-
               {{/each}}
+            </div>
 
-              <div class="form-row">
-                <div>
-                  <button class="btn btn-success mr-5" type="submit">Generate Trash Talk</button>
-                </div>
-                {{#if trashtalk}}
-                <div class="alert alert-info flex-grow-1" role="alert">{{trashtalk}}</div>
-                {{/if}}
+            <div class="form-row">
+              <div>
+                <button class="btn btn-success mr-5" type="submit">Generate Trash Talk</button>
               </div>
-
+              {{#if trashtalk}}
+              <div class="alert alert-info flex-grow-1" role="alert">{{trashtalk}}</div>
+              {{/if}}
             </div>
           </form>
         </div>
       </div>
+
     </div>
   </div>
 </div>

@@ -32,7 +32,6 @@ app.post('/', (req, res) => {
       item.isChecked = "on"
     }
   })
-
   res.render('index', { trashtalk, userList: userList.results })
 })
 
